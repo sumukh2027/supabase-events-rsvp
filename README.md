@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Supabase Events RSVP 🎟️
 
-## Getting Started
+A simple event RSVP platform built with **Next.js** + **Supabase**, as part of the Database Management assignment for **PixaBeam**.  
 
-First, run the development server:
+Users can:  
+✅ View a list of upcoming events  
+✅ RSVP to events with a status (**Yes / No / Maybe**)  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Demo  
+🔗 [Deployed on Vercel](https://supabase-events-rsvp.vercel.app)  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+(Add your actual Vercel link above 👆)  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack  
+- **Frontend**: [Next.js](https://nextjs.org/) (React + TypeScript)  
+- **Backend/Database**: [Supabase](https://supabase.com/) (Postgres + Auth)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **Deployment**: [Vercel](https://vercel.com/)  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Database Schema  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Users  
+- `id` (PK)  
+- `name`  
+- `email` (unique)  
+- `created_at`  
 
-## Deploy on Vercel
+### Events  
+- `id` (PK)  
+- `title`  
+- `description`  
+- `date`  
+- `city`  
+- `created_by` → FK (`Users.id`)  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### RSVPs  
+- `id` (PK)  
+- `user_id` → FK (`Users.id`)  
+- `event_id` → FK (`Events.id`)  
+- `status` (enum: Yes / No / Maybe)  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✅ Referential integrity: deleting a user also deletes their RSVPs.  
+
+---
+
+## 🖼️ Screenshots  
+
+(Add your screenshots here – save them in `/public/screenshots/`)  
+
+```md
+![Events Page](./public/screenshots/events.png)  
+![RSVP Form](./public/screenshots/rsvp.png)  
+![ER Diagram](./public/screenshots/er-diagram.png)  

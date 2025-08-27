@@ -11,7 +11,6 @@ Users can:
 ## 🚀 Live Demo  
 🔗 [Deployed on Vercel](https://supabase-events-rsvp.vercel.app)  
 
-(Add your actual Vercel link above 👆)  
 
 ---
 

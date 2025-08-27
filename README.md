@@ -49,11 +49,15 @@ Users can:
 
 ---
 
-## 🖼️ Screenshots  
+## 📸 Project Screenshots
 
-(Add your screenshots here – save them in `/public/screenshots/`)  
+### 1. Events Page
+![Events Page](./public/screenshots/Events_Page.png)
 
-```md
-![Events Page](./public/screenshots/events.png)  
-![RSVP Form](./public/screenshots/rsvp.png)  
-![ER Diagram](./public/screenshots/er-diagram.png)  
+### 2. RSVP Page
+![RSVP Page](./public/screenshots/RSVP_Page.png)
+
+### 3. ER Diagram
+![ER Diagram](./public/screenshots/ER_Diagram.png)
+
+  
